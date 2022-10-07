@@ -1,9 +1,22 @@
 let dataframe = []
     let nameSelector;
+    let values = [];
 
 const select = document.getElementById("names");
 
   
+let sliders = document.querySelectorAll(".slidecontainer");
+
+
+function getSlidersValues(){
+  console.log(sliders[0].querySelector("input").value); 
+  for (let i = 0; i < sliders.length; i++) {
+   values[i] = sliders[i].querySelector("input").value/100
+    
+  }
+  return values;
+}
+
 
 
 
@@ -133,16 +146,18 @@ function draw() {
 
 
 function calcularCos(a,b) {
- ax1 = a.Atributo1;
- bx1 = b.Atributo1;
- ax2 = a.Atributo2;
- bx2 = b.Atributo2;
- ax3 = a.Atributo3;
- bx3 = b.Atributo3;
- ax4 = a.Atributo4; 
- bx4 = b.Atributo4;
- ax5 = a.Atributo5;
- bx5 = b.Atributo5;
+ values =  getSlidersValues();
+
+ ax1 = a.Atributo1 * values[0];
+ bx1 = b.Atributo1 * values[0];
+ ax2 = a.Atributo2 * values[1];
+ bx2 = b.Atributo2 * values[1];
+ ax3 = a.Atributo3 * values[2];
+ bx3 = b.Atributo3 * values[2];
+ ax4 = a.Atributo4 * values[3]; 
+ bx4 = b.Atributo4 * values[3];
+ ax5 = a.Atributo5 * values[4];
+ bx5 = b.Atributo5 * values[4];
 
 pp = (ax1 * bx1)+(ax2 * bx2)+(ax3 * bx3)+(ax4 * bx4)+(ax5 * bx5);
 

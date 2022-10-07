@@ -40,3 +40,34 @@ canvas {
   font-size: 1em;
 
 }
+
+#sliders{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.slidecontainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  text-align: center;
+}
